@@ -17,7 +17,7 @@ export default {
       },
     }],
   ],
-  routes: [{
+  routes: [{//匹配路由
     path: '/',
     component: '../layouts',
     routes: [
@@ -42,9 +42,26 @@ export default {
         path: '/dashboard/workplace',
         component: 'Dashboard/Workplace'
       },
-      { path: '/list', 
-      component: './list' 
-    },
+      {
+        path: '/card',
+        component: './card'
+      },
+      {
+        path: '/list',
+        component: './list'
+      },
     ]
   }],
+  proxy: {//设置请求代理
+    '/telematics': {
+      target: 'http://api.map.baidu.com',
+      // target: 'http://10.0.75.47:54321/eolinker_os/Mock/simple?projectID=1&uri=',
+      // target: 'https://safe-falls-22549.herokuapp.com/random_joke',
+      // target: 'https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_joke',
+      changeOrigin: true
+    }
+  },
+  theme: {//更换主题
+    "@primary-color": "#30b767", // 绿色
+  }
 }

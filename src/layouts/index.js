@@ -30,21 +30,27 @@ export default class BasicLayout extends Component {
               <Menu.Item key="4"><Link to="/dashboard/workplace">工作台</Link></Menu.Item>
             </SubMenu>
             <Menu.Item key="5">
-              <Link to="/list">
+              <Link to="/card">
                 <Icon type="bars" />
-                <span>列表页面</span>
+                <span>卡片列表页面</span>
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="6">
+              <Link to="/list">
+                <Icon type="table" />
+                <span>Table表格页面</span>
               </Link>
             </Menu.Item>
           </Menu>
         </Sider>
         <Layout >
-          <Header style={{ background: '#fff', textAlign: 'center', padding: 0 }}>Header</Header>
+          <Header style={{ background: '#ecb9a3', textAlign: 'center', color: '#fff', fontSize: 18, padding: 0 }}>欢迎来到王静学习antd-dseign-umi-dva领域</Header>
           <Content style={{ margin: '24px 16px 0' }}>
             <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
               {this.props.children}
             </div>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+          <Footer style={{ textAlign: 'center' }}>copyright © wjing0904 test antd-design umi dva 2019-01-08</Footer>
         </Layout>
       </Layout>
     )
